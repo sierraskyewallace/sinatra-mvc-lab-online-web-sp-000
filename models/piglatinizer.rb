@@ -4,8 +4,8 @@ class PigLatinizer
     piglatin = words.collect do |w|
       if w =~ /\A([aeiou])/i
         "#{w}way"
-      else arr = w.split(/([aeiou].*)/i)
-        "#{arr[1]}#{arr[0]}ay"
+      else array = w.split(/([aeiou].*)/i)
+        "#{array[1]}#{array[0]}ay"
       end
     end
     piglatin.join(" ")
